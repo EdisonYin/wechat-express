@@ -11,9 +11,7 @@ install:
 test_script:
 - npm test
 
-build:
-  publish_wap: true
-  verbosity: minimal
+build: off
 
 artifacts:
 - path: artifacts
