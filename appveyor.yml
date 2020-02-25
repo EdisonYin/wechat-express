@@ -6,7 +6,7 @@ install:
 
     ls
 
-    pm2 bin/www
+    pm2 start bin/www
 
 test_script:
 - npm test
@@ -14,8 +14,6 @@ test_script:
 build:
   publish_wap: true
   verbosity: minimal
-pull_requests:
-  do_not_increment_build_number: true
 
 artifacts:
 - path: artifacts
