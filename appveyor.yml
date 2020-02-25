@@ -6,7 +6,26 @@ install:
 test_script:
 - npm test
 
-build: off
+build:
+  publish_wap: true
+  verbosity: minimal
+pull_requests:
+  do_not_increment_build_number: true
+
+install:
+- sh: >-
+    npm install pm2 -g pm2 update
+
+    ls
+
+    pm2 bin/www
+
+artifacts:
+- path: artifacts
+  name: wechat-express-azure
+
+before_deploy:
+- sh: npm install pm2
 
 deploy:
   - provider: AzureWebJob
