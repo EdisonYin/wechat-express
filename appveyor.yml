@@ -5,8 +5,7 @@ install:
     npm install pm2 -g pm2 update
 
     ls
-
-    pm2 start bin/www
+  # pm2 start bin/www
 
 test_script:
 - npm test
