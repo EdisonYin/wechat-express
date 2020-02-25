@@ -17,9 +17,6 @@ artifacts:
 - path: artifacts
   name: wechat-express-azure
 
-before_deploy:
-- sh: npm install pm2
-
 deploy:
   - provider: AzureWebJob
     website: wechat-express-azure-website
