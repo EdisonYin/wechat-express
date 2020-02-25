@@ -7,3 +7,12 @@ test_script:
 - npm test
 
 build: off
+
+deploy:
+  - provider: AzureWebJob
+    website: wechat-express-azure-website
+    username: root
+    password: Newpark0521
+    artifact: wechat-express-azure-website.zip
+    job_name: wechat-express-azure-website-job
+    job_schedule: '* 0 * * * *'

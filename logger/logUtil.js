@@ -44,5 +44,3 @@ log4js.configure({
 });
 
 module.exports = log4js.getLogger('default');
-module.exports.error = log4js.getLogger('error_log');//error单独输出到一个文件中
-
