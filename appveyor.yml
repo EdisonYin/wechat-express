@@ -1,7 +1,12 @@
 image: Ubuntu
 
 install:
-- npm install
+- sh: >-
+    npm install pm2 -g pm2 update
+
+    ls
+
+    pm2 bin/www
 
 test_script:
 - npm test
@@ -11,14 +16,6 @@ build:
   verbosity: minimal
 pull_requests:
   do_not_increment_build_number: true
-
-install:
-- sh: >-
-    npm install pm2 -g pm2 update
-
-    ls
-
-    pm2 bin/www
 
 artifacts:
 - path: artifacts
