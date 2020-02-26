@@ -12,7 +12,6 @@ test_script:
 - npm test
 
 build:
-    stage: build
     script:
         - npm install
     artifacts:
