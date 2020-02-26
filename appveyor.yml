@@ -14,7 +14,7 @@ test_script:
 build: off
 
 artifacts:
-- path: artifacts
+- path: node_modules
   name: wechat-express-azure
 
 before_deploy:
