@@ -11,7 +11,15 @@ install:
 test_script:
 - npm test
 
-build: off
+build:
+    stage: build
+    script:
+        - npm install
+    artifacts:
+        name: wechat-express-azure-website.zip
+        expire_in: 10 mins
+        paths:
+            - node_modules
 
 artifacts:
 - path: wechat-express-azure-website.zip
