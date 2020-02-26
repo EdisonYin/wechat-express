@@ -18,7 +18,6 @@ build:
   publish_azure_webjob: true
   verbosity: minimal
   parallel: true
-  verbosity: minimal
 
 artifacts:
 - path: wechat-express-azure-website.zip
