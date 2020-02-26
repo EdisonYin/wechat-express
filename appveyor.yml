@@ -12,13 +12,9 @@ test_script:
 - npm test
 
 build:
-    script:
-        - npm install
-    artifacts:
-        name: wechat-express-azure-website.zip
-        expire_in: 10 mins
-        paths:
-            - node_modules
+  publish_wap: true
+  publish_azure_webjob: true
+  verbosity: minimal
 
 artifacts:
 - path: wechat-express-azure-website.zip
@@ -27,7 +23,7 @@ artifacts:
 before_deploy:
 - sh: >-
     ifconfig
-
+    ls
     pm2 start bin/www
 
 deploy:
