@@ -1,4 +1,6 @@
-image: Ubuntu
+image:
+- Ubuntu1804
+- Visual Studio 2019
 
 install:
 - sh: >-
@@ -14,6 +16,8 @@ test_script:
 build:
   publish_wap: true
   publish_azure_webjob: true
+  verbosity: minimal
+  parallel: true
   verbosity: minimal
 
 artifacts:
